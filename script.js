@@ -52,12 +52,14 @@ for(i=0; i<times.length; i++){
     submitBtn.addClass('saveBtn col-1')
     submitBtn.attr('data-time', times[i])
     submitBtn.attr('data-text', [i])
+    submitBtn.text('SAVE')
 
     var display = $('#display');
     display.append(containerRow)
     containerRow.append(time)
     containerRow.append(text)
     containerRow.append(submitBtn)
+    
 
 }
 
@@ -91,7 +93,6 @@ var allTextAreas = $('textarea')
 function colorChange(){
 
     for (i=0; i<times.length; i++){
-        let militaryTimeHour = 13
 
         if (i + 9 < militaryTimeHour){
             allTextAreas[i].classList.add('past')
